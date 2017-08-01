@@ -47,10 +47,10 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     }, {
-      path: '/word',
+      path: '/word/:practice/:test/:pessage',
       name: 'word',
       getComponent(nextState, cb) {
-        import('containers/FeaturePage')
+        import('containers/WordPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
